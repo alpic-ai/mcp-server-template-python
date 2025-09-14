@@ -7,7 +7,7 @@ from pydantic import Field
 
 import mcp.types as types
 
-mcp = FastMCP("Echo Server", port=3000, stateless_http=True, debug=True)
+mcp = FastMCP("Echo Server")
 
 
 @mcp.tool(
@@ -45,4 +45,4 @@ def greet_user(
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="stdio")
