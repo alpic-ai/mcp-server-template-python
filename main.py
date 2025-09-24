@@ -2,7 +2,7 @@
 MCP Server Template
 """
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp import Context, FastMCP
 from pydantic import Field
 
 import mcp.types as types
@@ -13,8 +13,12 @@ mcp = FastMCP("Echo Server", stateless_http=True)
 @mcp.tool(
     title="Echo Tool",
     description="Echo the input text",
+
 )
-def echo(text: str = Field(description="The text to echo")) -> str:
+def echo(ctx: Context, text: str = Field(description="The text to echo")) -> str:
+    api_key = ctx.request_context.request.get("x-api-key")
+    if not api_key:
+        raise ValueError("API key is required")
     return text
 
 
