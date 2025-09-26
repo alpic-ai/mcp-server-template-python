@@ -138,3 +138,12 @@ cython_debug/
 .vscode/
 .windsurfrules
 **/CLAUDE.local.md
+
+# Alpic
+alpic
+.dockerignore
+Dockerfile
+initialize.json
+ping.json
+start.sh
+tmp
