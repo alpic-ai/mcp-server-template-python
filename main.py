@@ -2,7 +2,7 @@
 MCP Server Template
 """
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp import Context, FastMCP
 from pydantic import Field
 
 import mcp.types as types
@@ -14,7 +14,8 @@ mcp = FastMCP("Echo Server", stateless_http=True)
     title="Echo Tool",
     description="Echo the input text",
 )
-def echo(text: str = Field(description="The text to echo")) -> str:
+async def echo(ctx: Context, text: str = Field(description="The text to echo")) -> str:
+    await ctx.info(f"Echoing text: {text}")
     return text
 
 
