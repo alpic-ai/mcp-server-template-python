@@ -5,6 +5,12 @@ A very simple Python template for building MCP servers using Streamable HTTP tra
 ## Overview
 This template provides a foundation for creating MCP servers that can communicate with AI assistants and other MCP clients. It includes a simple HTTP server implementation with example tools, resources & prompts to help you get started building your own MCP integrations.
 
+## Deploy
+
+Use the following button to deploy the server to Alpic
+
+[![Deploy on Alpic](https://assets.alpic.ai/button.svg)](https://app.alpic.ai/new/clone?repositoryUrl=https%3A%2F%2Fgithub.com%2Falpic-ai%2Fmcp-server-template-python)
+
 ## Prerequisites
 - Install uv (https://docs.astral.sh/uv/getting-started/installation/)
 
@@ -48,13 +54,6 @@ The inspector server will start up and the UI will be accessible at http://local
 You can test your server locally by selecting:
 - Transport Type: Streamable HTTP
 - URL: http://127.0.0.1:3000/mcp
-
-## Deploy
-
-Use the following button to deploy the server to Alpic
-
-[![Deploy on Alpic](https://assets.alpic.ai/button.svg)](https://app.alpic.ai/new/clone?repositoryUrl=https%3A%2F%2Fgithub.com%2Falpic-ai%2Fmcp-server-template-python)
-
 
 ## Development
 
