@@ -5,9 +5,7 @@ MCP Server Template
 from mcp.server.fastmcp import FastMCP
 from pydantic import Field
 
-import mcp.types as types
-
-mcp = FastMCP("Echo Server", stateless_http=True)
+mcp = FastMCP("Echo Server")
 
 
 @mcp.tool(
